@@ -18,19 +18,12 @@ console.log(getAllDirectors(movies));
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
 
-function howManyMovies(movies) {
-    const spielbergMovies = movies.filter(movie => movie.director === "Spielberg" && movie.genre.includes("Drama"));
-    return spielbergMovies;
-}
-
-console.log(howManyMovies(movies));
-
 
 function howManyMovies(array) {
-    const dramaStevenSpielbergMovies = array.filter((directordrama) => {
+    const dramaStevenSpielbergMovies = array.filter((directorDrama) => {
       return (
-        directordrama.director.toLowerCase() === "steven spielberg" &&
-        directordrama.genre.includes("Drama") === true
+        directorDrama.director.toLowerCase() === "steven spielberg" &&
+        directorDrama.genre.includes("Drama") 
       );
     });
     return dramaStevenSpielbergMovies
@@ -46,18 +39,67 @@ function scoresAverage(movies) {
     return averageScore.toFixed(2);
 }
 
-const avgScore = scoresAverage(movies); 
-console.log(avgScore);
+const finalScore = scoresAverage(movies); 
+console.log(finalScore);
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
+
+// function scoresDrama(movies) {
+    
+//     const dramaMovies = movies.genre.filter(movie => movie.genre === 'Drama');
+   
+//     const dramaTotalScore = dramaMovies.reduce((acc, movie) => acc + movie.score, 0);
+   
+//     const averageDramaScore = dramaTotalScore / dramaMovies.length;
+
+//     return averageDramaScore;
+// }
+
+// console.log(scoresDrama(movies));
+
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 
 
- 
+function orderByYear(movies) {
+
+    const movieYears = movies.map(movie => {
+        return { Year: movie.year, };
+    });
+
+
+    movieYears.sort((a, b) => a.year - b.year);
+
+    return movieYears;
+}
+
+
+console.log(orderByYear(movies));
+
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 
+function orderAlphabetically(movie) {
+
+    let movieTitles = movies.map(movie => {
+        return { title: movie.title };
+    });
+
+
+    movieTitles.sort((a, b) => a.year - b.year);
+
+    return movieTitles;
+}
+
+let titlesOrder = movieTitles.sort(function(a, b){
+    if(a.title < b.title) { return -1; }
+    if(a.title > b.title) { return 1; }
+    return 0;
+})
+
+console.log(titlesOrder);
+
+console.log(orderAlphabetically(movies));
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 
