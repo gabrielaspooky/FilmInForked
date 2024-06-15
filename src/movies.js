@@ -15,6 +15,8 @@ getAllDirectors(movies)
 
 console.log(getAllDirectors(movies));
 
+bonus wip
+
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
 
@@ -101,7 +103,10 @@ console.log(orderAlphabetically(movies));
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 
+wip
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
+
+wip
 
 
